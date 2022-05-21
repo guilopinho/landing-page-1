@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,body{
+    height: 100%;
+}
+
+.container{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+/* Header */
+
+.main-header{
+    width: 100%;
+    height: 80px;
+    background-color: #212343;
+}
+
+.main-header > .container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Background e Formulario */
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+.bg-form{
+    width: 100%;
+    height: calc(100% - 80px);
+    background-image: url('../assets/header_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-form > .container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    width: 100%;
+    max-width: 500px;
+    padding: 60px 30px;
+    background-color: white;
+    animation: fadeIn 400ms 300ms ease-in-out both;
+}
+
+.form h2{
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+    color: #4a4a4a;
+}
+
+.form .inputs{
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+}
+
+.form .inputs i{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: #212343;
+    transform: translateY(-50%);
+}
+
+.form .inputs > input:not(input[type="submit"]){
+    width: 100%;
+    height: 50px;
+    padding-left: 40px;
+    border: 0;
+    font-weight: 500;
+    font-size: .9rem;
+    box-shadow: 0px 0px 6px -2px #ccc;
+    transition: 300ms box-shadow;
+}
+
+.form .inputs > input:not(input[type="submit"]):focus{
+    box-shadow: 0px 0px 6px -2px #676cb8;
+}
+
+.form .inputs > input:not(input[type="submit"]):focus + i{
+    color: #676cb8;
+}
+
+.form .inputs input[type="submit"]{
+    width: 100%;
+    height: 60px;
+    border: 0;
+    background-color: #212343;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: 1px solid #212343;
+    transition: 300ms background;
+}
+
+.form .inputs input[type="submit"]:hover{
+    background-color: transparent;
+    color: #212343;
+    border: 1px solid #212343;
+    cursor: pointer;
+}
+
+/* About */
+
+.about{
+    padding: 80px 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 0px 5px -2px #ccc;
+}
+
+.title{
+    width: 100%;
+    margin: 10px 0;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.9rem;
+    color: #4a4a4a;
+}
+
+.title > i{
+    color: #676cb8;
+}
+
+.about p{
+    width: 100%;
+    max-width: 700px;
+    display: inline-block;
+    text-align: 1rem;
+    text-align: justify;
+    color: #4a4a4a;
+}
+
+/* Services */
+
+.services{
+    padding: 30px 0;
+    background-color: rgb(247, 245, 245);
+}
+
+.card-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,200px);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 0px 6px -2px #ccc;
+}
+
+.card > i{
+    border-radius: 50%;
+    font-size: 5rem;
+    color: #676cb8;
+}
+
+/* Contact */
+
+.contact{
+    padding: 60px 0;
+}
+
+.form-contact{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.form-contact .inputs{
+    width: 100%;
+    margin: 10px 0;
+}
+
+.form-contact .inputs input:not(input[type="submit"]){
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 5px -2px #ccc;
+}
+
+.form-contact .inputs textarea{
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 1rem;
+    resize: none;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 5px -2px #ccc;
+}
+
+.form-contact .inputs input[type="submit"]{
+    width: 100%;
+    height: 70px;
+    font-size: 1rem;
+    border: 0;
+    background-color: #e7426b;
+    border: 1px solid #e7426b;
+    transition: 300ms background;
+    color: white;
+    cursor: pointer;
+}
+
+.form-contact .inputs input[type="submit"]:hover{
+    border: 1px solid #e7426b;
+    color: #e7426b;
+    background-color: transparent;
+}
+
+/* footer */
+
+footer{
+    width: 100%;
+    height: 60px;
+    background-color: #212343;
+}
+
+footer span{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+}
+
+@media (max-width: 980px){
+    .main-header > .container{
+        justify-content: center;
+    }
+
+    .card-content{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9,200px);
+    }
+}
